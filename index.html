@@ -9,25 +9,45 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Article preview component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <script async src="./styles/style.js" type="module"></script>
   <script defer src="./main.js" type="module"></script>
 </head>
 
 <body>
+  <main class="container">
+    <img src="./images/drawers.jpg" alt="drawers" class="container__image">
+    <section class="container__article article">
+      <h1 class="article__heading">Shift the overall look and feel by adding these wonderful
+        touches to furniture in your home</h1>
 
-  Shift the overall look and feel by adding these wonderful
-  touches to furniture in your home
+      <p class="article__para">Ever been in a room and felt like something was missing? Perhaps
+        it felt slightly bare and uninviting. I’ve got some simple tips
+        to help you make any room feel complete.</p>
+    </section>
 
-  Ever been in a room and felt like something was missing? Perhaps
-  it felt slightly bare and uninviting. I’ve got some simple tips
-  to help you make any room feel complete.
 
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
+    <footer class="container__user user">
+      <div class="user__profile profile">
+        <img src="./images/avatar-michelle.jpg" alt="Michelle" class="profile__img">
+        <h2 class="profile__title">Michelle Appleton</h2>
+        <p class="profile__date">28 Jun 2020</p>
+        <button class="profile__share share"><img src="./public/images/icon-share.svg" alt="icon-share"
+            class="share__icon">
+        </button>
+      </div>
+      <div class="user__social social inactive">
+        <h2 class="social__title">SHARE</h2>
+        <div class="social__icon logo">
+          <img src="./public/images/icon-facebook.svg" alt="icon-facebook" class="logo__id facebook--logo">
+          <img src="./public/images/icon-twitter.svg" alt="icon-twitter" class="logo__id twitter--logo">
+          <img src="./public/images/icon-pinterest.svg" alt="icon-pinterest" class="logo__id pinterest--logo">
+        </div>
+        <button class="social__share share"><img src="./public/images/active-share.svg" alt="icon-share"
+            class="share__icon">
+        </button>
+      </div>
+    </footer>
+  </main>
 </body>
 
 </html>
