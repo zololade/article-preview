@@ -116,7 +116,7 @@
 
     .share {
         background-color: util.$lgb;
-        background-image: url(./public/images/icon-share.svg);
+        background-image: url(../../images/icon-share.svg);
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -125,11 +125,11 @@
     .share:focus,
     .share:active {
         background-color: #6E8098;
-        background-image: url(./public/images/active-share.svg);
+        background-image: url(../../images/active-share.svg);
     }
 
     .btnActive {
-        background-image: url(./public/images/active-share.svg);
+        background-image: url(../../images/active-share.svg);
     }
 }
 
