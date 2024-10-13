@@ -1,12 +1,13 @@
 @use '../util/index' as util;
 
 .container__user {
-    transition: all 1s ease-in;
+    transition: all 0.25s ease-in;
+    position: relative;
 
 
     .user__profile {
         display: grid;
-        padding: 1rem 0;
+        padding: 1rem 1.5rem;
         grid-template-columns: 2rem auto 2rem;
         grid-template-rows: auto auto;
         column-gap: 1rem;
@@ -41,7 +42,7 @@
 
     .user__social {
         display: grid;
-        padding: 1rem 0;
+        padding: 1rem 1.5rem;
         grid-template-columns: max-content auto 2rem;
         column-gap: 1rem;
 
@@ -76,10 +77,60 @@
         }
     }
 
-    .inactive {
+    .profileInactive,
+    .socialInactive {
         display: none;
     }
 
+
+    @include util.breakpoint-min(Mobile) {
+        .profileInactive {
+            display: grid;
+        }
+
+        .user__social {
+            z-index: 1;
+            position: absolute;
+            top: -2.5rem;
+            right: -3.9rem;
+            grid-template-columns: max-content auto;
+            border-radius: .8rem;
+            padding: .8rem 1.5rem;
+
+            .social__share {
+                display: none;
+            }
+        }
+
+        .user__social::before {
+            content: "";
+            background-color: util.$vdgb;
+            clip-path: polygon(0 0, 100% 0, 50% 60%);
+            width: 1rem;
+            height: 1rem;
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+        }
+    }
+
+    .share {
+        background-color: util.$lgb;
+        background-image: url(../../public/images/icon-share.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .share:hover,
+    .share:focus,
+    .share:active {
+        background-color: #6E8098;
+        background-image: url(../../public/images/active-share.svg);
+    }
+
+    .btnActive {
+        background-image: url(../../public/images/active-share.svg);
+    }
 }
 
 .bgActive {

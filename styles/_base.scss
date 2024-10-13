@@ -15,7 +15,10 @@ body {
         margin: auto;
         background-color: white;
         border-radius: .8rem;
-        overflow: hidden;
+
+        @include util.breakpoint-max(Mobile) {
+            overflow: hidden;
+        }
 
         @include util.breakpoint-min(Mobile) {
             display: grid;
@@ -34,9 +37,17 @@ body {
         .container__image {
             max-width: 100%;
             height: auto;
+
+            @include util.breakpoint-min(Mobile) {
+                border-radius: .8rem 0 0 .8rem;
+            }
+
+
         }
 
         .container__article {
+            padding: 0 1.5rem;
+
             .article__heading {
                 font-size: util.rem(15);
                 color: util.$vdgb;
@@ -51,11 +62,6 @@ body {
 
         .container__user {
             margin-top: 1rem;
-        }
-
-        .container__article,
-        .container__user {
-            padding: 0 1.5rem;
         }
     }
 }
